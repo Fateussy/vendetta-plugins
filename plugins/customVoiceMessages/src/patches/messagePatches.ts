@@ -9,8 +9,8 @@ export function msgSuccess() {
             x.attachments.forEach(a => {
                 if (a.content_type?.startsWith?.("audio")) {
                     x.flags |= 8192;
-                    a.waveform = "AEtWPyUaGA4OEAcA";
-                    a.duration_secs = 60;
+                    a.waveform = "AEtWPAAAAAcA";
+                    a.duration_secs = 9999;
                 }
             })
         }
@@ -24,7 +24,7 @@ export function msgCreate() {
         let message = args[0].message
         if (message?.attachments?.[0]?.content_type?.startsWith("audio")) {
             message.flags |= 8192
-            message.attachments.forEach(x => { x.waveform = "AEtWPyUaGA4OEAcA", x.duration_secs = 60 })
+            message.attachments.forEach(x => { x.waveform = "AEtWPAAAAAcA", x.duration_secs = 9999 })
         }
     })
 }
@@ -35,7 +35,7 @@ export function msgUpdate() {
         let message = args[0].message
         if (message?.attachments?.[0]?.content_type?.startsWith("audio")) {
             message.flags |= 8192
-            message.attachments.forEach(x => { x.waveform = "AEtWPyUaGA4OEAcA", x.duration_secs = 60 })
+            message.attachments.forEach(x => { x.waveform = "AEtWPAAAAAcA", x.duration_secs = 9999 })
         }
     })
 }
